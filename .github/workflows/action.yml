@@ -46,13 +46,13 @@ jobs:
     - name: Send Telegram notification - Trigger
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_ID_BOT }}
+        to: ${{ secrets.TELEGRAM_SEND_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: "Build triggered by${{ github.actor }}"
+        message: "Сборка начата ${{ github.actor }}"
 
     - name: Send Telegram notification - Build Result
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_ID_BOT }}
+        to: ${{ secrets.TELEGRAM_SEND_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: "Build completed successfully"
+        message: "Сборка успешна завершена"
