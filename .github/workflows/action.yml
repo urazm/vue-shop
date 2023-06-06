@@ -53,6 +53,6 @@ jobs:
     - name: Send Telegram notification - Build Result
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        to: ${{ secrets.TELEGRAM_ID_BOT }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Build completed successfully"
