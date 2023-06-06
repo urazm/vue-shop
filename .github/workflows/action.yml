@@ -24,11 +24,11 @@ jobs:
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
-      
+
     - name: Build and tag Docker image
       run: |
         docker build -t my-vue-app .
-        docker tag my-vue-app my-vue-app:latest
+        docker tag my-vue-app mirlan123321/my-vue-app:latest
 
     - name: Run Docker image
       run: docker run -d -p 8000:8000 my-vue-app:latest
@@ -41,4 +41,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Send Docker image
-      run: docker push my-vue-app:latest
+      run: docker push mirlan123321/my-vue-app:latest
